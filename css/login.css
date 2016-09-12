@@ -1,0 +1,273 @@
+@font-face{
+    font-family:"Gotham-Book";
+    src: url(fonts/Gotham-Book.otf);
+}
+@font-face{
+    font-family:"Gotham-Bold";
+    src: url(fonts/Gotham-Bold.otf);
+}
+@font-face{
+    font-family:"FontAwesome";
+    src: url(fonts/FontAwesome.otf.otf);
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family:"Gotham-Book";
+}
+body{
+	width: 100%;
+	background-color: #26303a;
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	    -webkit-align-items: center;
+	            align-items: center;
+	min-height: 100vh;
+}
+a{   
+ text-decoration:none;   
+ font-family:"Gotham-Bold";
+ color: #27ae61;
+} 
+.login{
+	width: 310px;
+	height: 400px;
+	padding: 10px;
+	margin: auto;
+	text-align: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	    -webkit-align-items: center;
+	            align-items: center;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.cReg{
+	width: 310px;
+	padding: 10px;
+	margin: auto;
+	text-align: left;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	    -webkit-align-items: center;
+	            align-items: center;
+	position: flex;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	color: #FFF;
+}
+.cReg h3{
+	text-align: center;
+}
+.cReg p{
+	padding: 10px;
+	color: #27ae61;
+}
+.wrapper{
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	    -webkit-align-items: center;
+	            align-items: center;
+}
+.login h3{
+	color: #FFF;
+	font-family:"Gotham-Bold";
+}
+.txtAreaOficio{
+	width: 305px;
+}
+.regLogin{
+	width: 310px;
+	height: 650px;
+	margin: 40px auto;
+	text-align: center;
+}
+.regLogin h3{
+	color: #FFF;
+	font-family:"Gotham-Bold";
+}
+.cLogin{
+	background-image: url("img/login.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	background-color: #FFF;
+}
+.uLogin{
+	width: 92%;
+	height: 43px;
+	padding: 0px 10px;
+	border: 1px solid #fff;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	        border-radius: 5px 5px 0px 0px;
+	background-color: #26303a;
+	color: #FFF;
+}
+.uOptLogin{
+	width: 308px;
+	height: 43px;
+	padding: 0px 10px;
+	border: 1px solid #fff;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	        border-radius: 5px 5px 0px 0px;
+	background-color: #26303a;
+	color: #FFF;
+}
+.nLogin{
+	width: 92%;
+	height: 43px;
+	padding: 0px 10px;
+	border: 1px solid #fff;
+	background-color: #26303a;
+	color: #FFF;
+}
+.ninLogin{
+	width: 30%;
+	height: 43px;
+	padding: 0px 10px;
+	border: 1px solid #fff;
+	background-color: #26303a;
+	color: #FFF;
+}
+.nOptLogin{
+	width: 308px;
+	height: 43px;
+	padding: 0px 10px;
+	border: 1px solid #fff;
+	background-color: #26303a;
+	color: #FFF;
+}
+.pLogin{
+	width: 92%;
+	height: 43px;
+	padding: 0px 10px;
+	border: 1px solid #fff;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	        border-radius: 0px 0px 5px 5px;
+	background-color: #26303a;
+	color: #FFF;
+}
+.pOptLogin{
+	width: 308px;
+	height: 43px;
+	padding: 0px 10px;
+	border: 1px solid #fff;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	        border-radius: 0px 0px 5px 5px;
+	background-color: #26303a;
+	color: #FFF;
+}
+.btLogin{
+	width: 99%;
+	height: 43px;
+	border: 0px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	background-color: #27ae61;
+	color: #FFF;
+	font-family:"Gotham-Bold";
+	font-size: 18px;
+}
+
+/*###################### Tabla ######################*/
+
+.cTablaMaster{
+	margin: 50px auto;
+	text-align: center;
+	width: 350px;
+	height: 100%;
+}
+.cTablaMaster h3{
+	color: #FFF;
+}
+.cTopCreden{
+	width: 133px;
+	height: 34px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	        border-radius: 10px 10px 0px 0px;
+	background-color: #27ae61;
+	color: #FFF;
+	display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    
+}
+.cCreden{
+	width: 350px;
+	height: 218px;
+	background-color: #27ae61;
+	-webkit-border-radius: 0px 10px 10px 10px;
+	        border-radius: 0px 10px 10px 10px;
+	display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0px 0px 20px 0px;
+}
+.cCredenT{
+	margin: 0px auto;
+	width: 339px;
+	height: 207px;
+	background-color: #FAFAFA;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+}
+.tabFoto{
+	width: 130px;
+	height: 110px;
+}
+.imgTabFoto{
+	width: 80px;
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
+}
+.tabDatP{
+	text-align: left;
+}
+.tabDatP h4{
+	font-family:"Gotham-Bold";
+}
+.tabDatP p{
+	font-size: .7em;
+}
+.tabQuin{
+	position: absolute;
+	overflow-x: scroll;
+	width: 205px;
+	font-size: .97em;
+}
+.tabTel p{
+	padding: 0px 0px 0px 2px;
+	text-align: left;
+	font-size: .8em;
+	font-family:"Gotham-Bold";
+}
+.tabQuin table td{
+	padding: 2px;
+	border: 1px solid #27ae61;
+}
+.tabVerde{
+	background-color: #27ae61;
+	color: #fff;
+	font-family:"Gotham-Bold";
+}
+.fotito{
+	width: 100px;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+}
+.inputOculto{
+	display: none;
+}
