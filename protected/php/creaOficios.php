@@ -7,7 +7,7 @@ include("seguridad.php");
 $numEMpleado = $_SESSION['numEmpleado'];
 
 $con = new SQLite3("../data/usuarios.db");
-$infoUser = $con -> query("SELECT areaPert,deptoPert,nombreDir,cargoDir,fileFirma,numSerie FROM datos WHERE noEmpleado = '$numEMpleado'");
+$infoUser = $con -> query("SELECT areaPert,deptoPert,nombreDir,cargoDir,fileFirma,numSerie,LENGTH(numSerie) FROM datos WHERE noEmpleado = '$numEMpleado'");
 while ($optArea = $infoUser -> fetchArray()){
 						$resOptArea = $optArea[0];
 						$resOptDirec = $optArea[1];
@@ -15,8 +15,13 @@ while ($optArea = $infoUser -> fetchArray()){
 						$resCarDir = $optArea[3];
 						$resFileFirma = $optArea[4];
 						$resNumSerie = $optArea[5];
+						$cuantoCara = $optArea[6];
 
 					};
+
+					$_SESSION['serie'] = $resNumSerie;
+					$cuantoCara = $cuantoCara + 1;
+
 $con -> close();
 
 // ###### Termina Consulta de Info Usuario ######
@@ -34,7 +39,7 @@ $csdepto = $con2 -> query("SELECT DEPARTAMENTO FROM mayo_1ra_2016 WHERE DEPARTAM
 // ###### Inicia Generador de Folio ######
 
 $con3 = new SQLite3("../data/oficios.db");
-$csSerie = $con3 -> query("SELECT COUNT(contF_serie), MAX(contF_serie) FROM contFolio WHERE contF_serie = '$resNumSerie'");
+$csSerie = $con3 -> query("SELECT COUNT(contF_numFolio), MAX(contF_numFolio) FROM contFolio WHERE contF_serie = '$resNumSerie'");
 while ( $resS = $csSerie -> fetchArray()) {
 	$cont = $resS[0];
 	$max = $resS[1];
@@ -42,7 +47,7 @@ while ( $resS = $csSerie -> fetchArray()) {
 if ($cont == 0) {
 	$numFOficio = $resNumSerie."/0001/".date('Y')."/V";
 }else{
-	$numFOficio= $resNumSerie."/".substr((substr($max, 1)+ 10001), 1)."/".date('Y')."/V";
+	$numFOficio=  $resNumSerie."/".substr((substr($max, $cuantoCara)+ 10001), 1)."/".date('Y')."/V";
 }
 
 $con3 -> close();

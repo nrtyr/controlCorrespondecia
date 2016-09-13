@@ -2,7 +2,6 @@
 // include("seguridad.php");
 include("date.php");
 include("seguridad.php");
-session_start();
 
 $numOficio = $_POST['txtNumFolio'];
 $areaEmisora  = $_POST['optAreaPertE'];
@@ -23,6 +22,7 @@ $_SESSION['areaEmisora'] = $areaEmisora;
 $_SESSION['deptoEmisora'] = $deptoEmisora;
 $_SESSION['personaRecep'] = $personaRecep;
 $_SESSION['cargo'] = $cargo;
+$_SESSION['areaRecep'] = $areaRecep;
 $_SESSION['contOficio'] = $contOficio;
 $_SESSION['archAdjunto'] = $archAdjunto;
 $_SESSION['numEMpleado'] = $numEMpleado;

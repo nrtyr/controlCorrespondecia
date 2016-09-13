@@ -2,13 +2,13 @@
 // include("seguridad.php");
 include("date.php");
 include("seguridad.php");
-session_start();
 
 $numOficio = $_SESSION['numOficio'];
 $areaEmisora = $_SESSION['areaEmisora'];
 $deptoEmisora = $_SESSION['deptoEmisora'];
 $personaRecep = $_SESSION['personaRecep'];
 $cargo = $_SESSION['cargo'];
+$areaRecep = $_SESSION['areaRecep'];
 $contOficio = $_SESSION['contOficio'];
 $archAdjunto = $_SESSION['archAdjunto'];
 $numEMpleado = $_SESSION['numEMpleado'];

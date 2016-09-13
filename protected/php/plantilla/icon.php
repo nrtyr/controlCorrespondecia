@@ -6,6 +6,10 @@ while ($optAreaF = $infoUserF -> fetchArray()){
 						$iconoF = $optAreaF[0];
 
 					};
+
+$_SESSION['iconoF'] = $iconoF;
+
+
 $conF -> close();
 
  ?>
