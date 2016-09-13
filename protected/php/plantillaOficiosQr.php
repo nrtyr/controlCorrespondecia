@@ -4,7 +4,7 @@ include("date.php");
 include("seguridad.php");
 
 
-
+$numOficio = $_POST['txtNumFolio'];
 $areaEmisora  = $_POST['optAreaPertE'];
 $deptoEmisora = $_POST['optDeptoPertE'];
 $personaRecep = strtoupper($_POST['txtNombPersona']);
@@ -39,7 +39,7 @@ if (isset($numEMpleado) && !empty($numEMpleado)) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Oficios</title>
+	<title><?php echo $numOficio; ?></title>
 	<link rel="stylesheet" href="plantilla/css/plantilla.css">
 	<link rel="stylesheet" href="../../css/normalize.css" />
 	
@@ -75,6 +75,9 @@ include("plantilla/icon.php")
 
 
 <div class="datosDireccion">
+	<!-- Numero de Oficio -->
+	<?php echo  $numOficio; ?>
+	<br>
 	<!-- Area Emisora -->
 	<?php echo  $areaEmisora; ?>
 	<br>
@@ -126,7 +129,7 @@ include("plantilla/icon.php")
 		<?php echo $cargoEnca; ?>
 
 	</div>
-<img src="qr.php" class="cuadroQR">
+<img src="qr.php?idOficio=<?php echo 'http://nicolasromero.mx/oficios/buscador/oficios.php?numOficio='.$numOficio; ?>" class="cuadroQR">
 
 <!-- 		################### Termina Aplicación ################### -->
 

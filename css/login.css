@@ -73,6 +73,9 @@ input[type=text]{
 	padding: 10px;
 	color: #27ae61;
 }
+.numOficio{
+	font-size: 1.8em;
+}
 .wrapper{
 	display: flex;
 	-webkit-justify-content: center;

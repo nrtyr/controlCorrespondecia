@@ -2,6 +2,8 @@
 
 include("seguridad.php");
 
+// ###### Inicia Consulta de Info Usuario ######
+
 $numEMpleado = $_SESSION['numEmpleado'];
 
 $con = new SQLite3("../data/usuarios.db");
@@ -15,10 +17,37 @@ while ($optArea = $infoUser -> fetchArray()){
 						$resNumSerie = $optArea[5];
 
 					};
+$con -> close();
+
+// ###### Termina Consulta de Info Usuario ######
+
+
+// ###### Inicia Consulta para Areas ######
 
 $con2 = new SQLite3("../data/trabajadores.db");
 $csdepto = $con2 -> query("SELECT DEPARTAMENTO FROM mayo_1ra_2016 WHERE DEPARTAMENTO NOT LIKE 'NULL' GROUP BY DEPARTAMENTO ORDER BY DEPARTAMENTO");
 
+
+
+// ###### Termina Consulta para Areas ######
+
+// ###### Inicia Generador de Folio ######
+
+$con3 = new SQLite3("../data/oficios.db");
+$csSerie = $con3 -> query("SELECT COUNT(contF_serie), MAX(contF_serie) FROM contFolio WHERE contF_serie = '$resNumSerie'");
+while ( $resS = $csSerie -> fetchArray()) {
+	$cont = $resS[0];
+	$max = $resS[1];
+}
+if ($cont == 0) {
+	$numFOficio = $resNumSerie."/0001/".date('Y')."/V";
+}else{
+	$numFOficio= $resNumSerie."/".substr((substr($max, 1)+ 10001), 1)."/".date('Y')."/V";
+}
+
+$con3 -> close();
+
+// ###### Termina Generador de Folio ######
  ?>
 
 <!DOCTYPE html>
@@ -36,6 +65,9 @@ $csdepto = $con2 -> query("SELECT DEPARTAMENTO FROM mayo_1ra_2016 WHERE DEPARTAM
 		<br>
 		<form action="plantillaOficiosQr.php" method="post">
 		<br>
+			<p>Número de Oficio</p>
+			<p class="numOficio"><?php echo $numFOficio; ?></p>
+			<input type="text" name="txtNumFolio" value="<?php echo $numFOficio; ?>" class="inputOculto">
 			<p>Área a la que pertenece</p>
 			<select name="optAreaPertE" class="nOptLogin">
 				<option value="<?php  echo $resOptArea; ?>"><?php  echo $resOptArea; ?></option>
@@ -66,6 +98,8 @@ $csdepto = $con2 -> query("SELECT DEPARTAMENTO FROM mayo_1ra_2016 WHERE DEPARTAM
 							<option value="'.$resOptArea .'">'.$resOptArea .'</option>
 						';
 					}
+					
+					$con2 -> close();
 				?>
 			</select>
 			<br>

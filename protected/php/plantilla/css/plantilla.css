@@ -8,12 +8,11 @@
 		}
 		.cHojaMem{
 			width: 812px;
-			height: 1075px;
+			height: 1074px;
 			position: absolute;
 			margin: 0px auto;
 			left: 0px;
 			right: 0px;
-			
 		}
 		.imgEscudo{
 			width: 100px;
@@ -48,7 +47,7 @@
 		.datosDireccion{
 			width: 500px;
 			position: absolute;
-			margin-top: 250px;
+			margin-top: 220px;
 			margin-left: 230px;
 			text-align: right;
 			font-weight: bold;
@@ -114,7 +113,7 @@
 			width: 812px;
 			height: 130px;
 			position: absolute;
-			margin-top: 945px;
+			margin-top: 944px;
 			margin-left: -130px;
 			z-index: 5;
 		}

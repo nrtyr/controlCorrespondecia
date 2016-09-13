@@ -3,10 +3,10 @@
 	include("phpqrcode/qrlib.php");
 
 		// $name = $_POST["txtNombre"];
-		$name = 'http://nicolasromero.mx/oficios';
+		$name = $_GET['idOficio'];
 		$outfile = false;
 		$level = 'h';
-		$size = 4;
+		$size = 3;
 		$margin = 1;
 		$saveandprint = false;
 	    $back_color = 0xFFFFFF;

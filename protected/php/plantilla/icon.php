@@ -6,6 +6,7 @@ while ($optAreaF = $infoUserF -> fetchArray()){
 						$iconoF = $optAreaF[0];
 
 					};
+$conF -> close();
 
  ?>
 
