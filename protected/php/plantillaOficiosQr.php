@@ -172,7 +172,7 @@ include("plantilla/marcadeagua.php");
 		<h2>Para continuar ingresa Correo Electrónico</h2>
 		<br>
 		<div class="btImprimir">
-		<a href="plantillaOficiosQrImp.php" class="impreLink" target="_blank"><i class="fa fa-print fa-4x" aria-hidden="true"><p>Imprimir</p></i></a>
+		<a href="plantillaOficiosQrImp.php" class="impreLink" target="_blank"><i class="fa fa-print fa-3x" aria-hidden="true"><p>Imprimir</p></i></a>
 		</div>
 		<br>
 		<br>
