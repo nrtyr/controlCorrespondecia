@@ -30,6 +30,10 @@ a{
  font-family:"Gotham-Bold";
  color: #27ae61;
 } 
+input[type=text]{
+	font-family:"Gotham-Book";
+	font-size: 1em;
+}
 .login{
 	width: 310px;
 	height: 400px;
@@ -133,7 +137,7 @@ a{
 	color: #FFF;
 }
 .ninLogin{
-	width: 30%;
+	width: 35%;
 	height: 43px;
 	padding: 0px 10px;
 	border: 1px solid #fff;
@@ -141,7 +145,7 @@ a{
 	color: #FFF;
 }
 .nOptLogin{
-	width: 308px;
+	width: 307px;
 	height: 43px;
 	padding: 0px 10px;
 	border: 1px solid #fff;

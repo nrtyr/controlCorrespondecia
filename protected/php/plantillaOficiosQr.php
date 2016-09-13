@@ -3,6 +3,8 @@
 include("date.php");
 include("seguridad.php");
 
+
+
 $areaEmisora  = $_POST['optAreaPertE'];
 $deptoEmisora = $_POST['optDeptoPertE'];
 $personaRecep = strtoupper($_POST['txtNombPersona']);
@@ -18,7 +20,15 @@ $nombreEnca  = $_POST['txtNomDir'];
 $cargoEnca  = $_POST['txtCarDir'];
 
 
-// Esta parte solo carga firma
+
+// Si esta vacío se regresa
+
+if (isset($numEMpleado) && !empty($numEMpleado)) {
+	# code...
+}else{
+	echo "<script> window.location='creaOficios.php'; </script>";
+}
+// Si esta vacío se regresa
 
 
 
