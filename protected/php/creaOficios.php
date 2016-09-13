@@ -108,8 +108,6 @@ $con3 -> close();
 			<br>
 			<br>
 			<input type="file" class="" name="archAdjunto">
-			<p>Correo Electrónico:</p>
-			<input type="mail" name="txtCorreoEnviar" placeholder="Correo Electrónico del Destinatario" class="nLogin">
 			<br>
 			<input type="text" name="txtNumEmp" value="<?php echo $numEMpleado; ?>" class="inputOculto"/>
 			<input type="text" name="txtNomDir" value="<?php echo $resNomDir; ?>" class="inputOculto"/>
@@ -120,6 +118,8 @@ $con3 -> close();
 		</form>
 		<br>
 		<a href="login.php">Regresar...</a>
+		<br>
+		<br>
 	</div>
 </body>
 </html>

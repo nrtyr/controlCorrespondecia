@@ -4,31 +4,16 @@ include("date.php");
 include("seguridad.php");
 session_start();
 
-$numOficio = $_POST['txtNumFolio'];
-$areaEmisora  = $_POST['optAreaPertE'];
-$deptoEmisora = $_POST['optDeptoPertE'];
-$personaRecep = strtoupper($_POST['txtNombPersona']);
-$personaRecep = strtr($personaRecep, "áéíóú", "ÁÉÍÓÚ");
-$cargo = strtoupper($_POST['txtCargo']);
-$cargo = strtr($cargo, "áéíóú", "ÁÉÍÓÚ");
-$areaRecep    = $_POST['optAreaRece'];
-$contOficio   = nl2br($_POST['txtContOficio']);
-$archAdjunto  = $_POST['archAdjunto'];
-$numEMpleado = $_POST['txtNumEmp'];
-$nombreEnca  = $_POST['txtNomDir'];
-$cargoEnca  = $_POST['txtCarDir'];
-
-$_SESSION['numOficio'] = $numOficio;
-$_SESSION['areaEmisora'] = $areaEmisora;
-$_SESSION['deptoEmisora'] = $deptoEmisora;
-$_SESSION['personaRecep'] = $personaRecep;
-$_SESSION['cargo'] = $cargo;
-$_SESSION['contOficio'] = $contOficio;
-$_SESSION['archAdjunto'] = $archAdjunto;
-$_SESSION['numEMpleado'] = $numEMpleado;
-$_SESSION['nombreEnca'] = $nombreEnca;
-$_SESSION['cargoEnca'] = $cargoEnca;
-
+$numOficio = $_SESSION['numOficio'];
+$areaEmisora = $_SESSION['areaEmisora'];
+$deptoEmisora = $_SESSION['deptoEmisora'];
+$personaRecep = $_SESSION['personaRecep'];
+$cargo = $_SESSION['cargo'];
+$contOficio = $_SESSION['contOficio'];
+$archAdjunto = $_SESSION['archAdjunto'];
+$numEMpleado = $_SESSION['numEMpleado'];
+$nombreEnca = $_SESSION['nombreEnca'];
+$cargoEnca = $_SESSION['cargoEnca'];
 
 // Si esta vacío se regresa
 
@@ -39,8 +24,6 @@ if (isset($numEMpleado) && !empty($numEMpleado)) {
 }
 // Si esta vacío se regresa
 
-
-
  ?>
 
 <!DOCTYPE html>
@@ -49,14 +32,14 @@ if (isset($numEMpleado) && !empty($numEMpleado)) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=devicewidth, minimal-ui">
 	<title><?php echo $numOficio; ?></title>
-	<link rel="stylesheet" href="plantilla/css/plantilla.css">
+	<link rel="stylesheet" href="plantilla/css/plantilla.css ">
 	<link rel="stylesheet" href="plantilla/css/font-awesome.css">
 	<link rel="stylesheet" href="../../css/normalize.css" />
 	<link rel="stylesheet" href="../../css/controles.css">
 	
 </head>
-<!-- <body onload="window.print();"> -->
-<body>
+<body onload="window.print();">
+<!-- <body> -->
 	<div class="wrapper">
 		<div class="cHojaMem">
 			
@@ -165,52 +148,7 @@ include("plantilla/marcadeagua.php");
 </div>
 <!-- 		################### Termina Marca de Agua Solo Texto ################### -->
 
-<div class="controles">
-	<form action="guardarOficio.php" method="post">
-		<br>
-		<br>
-		<h2>Para continuar ingresa Correo Electrónico</h2>
-		<br>
-		<div class="btImprimir">
-		<a href="plantillaOficiosQrImp.php" class="impreLink" target="_blank"><i class="fa fa-print fa-4x" aria-hidden="true"><p>Imprimir</p></i></a>
-		</div>
-		<br>
-		<br>
-		<input type="text" name="txtNumOfi" value="<?php echo $numOficio; ?>" class="inputOculto"/>
-		
-		<input type="text" name="txtAreaEmi" value="<?php echo $areaEmisora; ?>" class="inputOculto"/>
-		
-		<input type="text" name="txtDeptoEmi" value="<?php echo $deptoEmisora; ?>" class="inputOculto"/>
-		
-		<input type="text" name="txtPerRecep" value="<?php echo $personaRecep; ?>" class="inputOculto"/>
-		
-		<input type="text" name="txtCargo" value="<?php echo $cargo; ?>" class="inputOculto"/>
-		
-		<input type="text" name="txtAreaRecep" value="<?php echo $areaRecep; ?>" class="inputOculto"/>
-		
-		<input type="text" name="txtContOfi" value="<?php echo $contOficio; ?>" class="inputOculto"/>
-		
-		<input type="text" name="txtArchAdj" value="<?php echo $archAdjunto; ?>" class="inputOculto"/>
-		
-		<input type="mail" name="txtCorreo" placeholder="Correo Institucional.." class="inputGrande" />
-		
-		<input type="text" name="txtNumEmp" value="<?php echo $numEMpleado; ?>" class="inputOculto"/>
-		
-		<input type="text" name="txtNomEnca" value="<?php echo $nombreEnca; ?>" class="inputOculto"/>
-		
-		<input type="text" name="txtCarEnca" value="<?php echo $cargoEnca; ?>" class="inputOculto"/>
-		<br>
-		<br>
 
-		<input type="submit" value="Enviar" class="btGrande" />
-		<br>
-		<br>
-		<br>
-		<a href="creaOficios.php" class="linkBack">Regresar...</a>
-		<br>
-		<br>
-	</form>
-</div>
 		</div>
 	</div>
 

@@ -1,0 +1,81 @@
+@font-face{
+    font-family:"Gotham-Book";
+    src: url(fonts/Gotham-Book.otf);
+}
+@font-face{
+    font-family:"Gotham-Bold";
+    src: url(fonts/Gotham-Bold.otf);
+}
+@font-face{
+    font-family:"FontAwesome";
+    src: url(fonts/FontAwesome.otf.otf);
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family:"Gotham-Book";
+}
+a{
+	text-decoration:none;
+}
+.impreLink{
+	text-decoration:none;
+	color: #FFF;
+}
+.linkBack{   
+ text-decoration:none;   
+ font-family:"Gotham-Bold";
+ color: #27ae61;
+ font-size: 1.5em;
+}
+h2{
+	margin: 10px;
+	color: #3F3F3F;
+}
+.controles{
+	margin: 0px auto;
+	width: 65%;
+	height: 360px;
+	margin-top: 1074px;
+	text-align: center;
+}
+.inputOculto{
+	display: none;
+}
+.btImprimir{
+	margin: 0px auto;
+	border-radius: 5px;
+	width: 80%;
+	height: 95px;
+	padding: 10px;
+	background-color: #27ae61;
+	color: #fff;
+	cursor: pointer;
+}
+.btImprimir p{
+	font-family:"Gotham-Bold";
+	font-size: .5em;
+	
+}
+.inputGrande{
+	width: 80%;
+	height: 60px;
+	margin: 10px;
+	border: 1px solid #27ae61;
+	text-align: center;
+	font-size: 1.5em;
+	padding: 0px 10px 0px 10px;
+	border-radius: 5px;
+	
+}
+.btGrande{
+	width: 83%;
+	height: 95px;
+	border: 0px;
+	border-radius: 5px;
+	background-color: #27ae61;
+	color: #FFF;
+	font-family:"Gotham-Bold";
+	font-size: 1.7em;
+	cursor: pointer;
+}
