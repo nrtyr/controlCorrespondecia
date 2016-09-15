@@ -86,6 +86,7 @@ include("plantilla/icon.php")
 
 
 <div class="datosDireccion">
+	
 	<!-- Numero de Oficio -->
 	<?php echo  $numOficio; ?>
 	<br>
@@ -98,6 +99,7 @@ include("plantilla/icon.php")
 	Ciudad Nicolás Romero, Edo. Méx.: a 
 	<!-- Fecha -->
 	<?php echo $dia." de ".$mes." del ".$ano; ?>
+	
 
 </div>
 

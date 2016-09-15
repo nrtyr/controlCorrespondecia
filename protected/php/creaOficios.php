@@ -109,7 +109,7 @@ $con3 -> close();
 			</select>
 			<br>
 			<br>
-			<textarea name="txtContOficio" id="" cols="30" rows="10" class="txtAreaOficio" maxlength="1024">Por medio de la presente me dirijo a usted para....</textarea>
+			<textarea name="txtContOficio" id="" cols="30" rows="10" class="txtAreaOficio" maxlength="1240">Por medio de la presente me dirijo a usted para....</textarea>
 			<br>
 			<br>
 			<input type="file" class="" name="archAdjunto">
