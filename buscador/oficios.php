@@ -4,11 +4,15 @@ header("Content-Type: text/html; Charset=UTF-8");
 error_reporting(E_ALL ^ E_DEPRECATED);
 
 
-$codigoQR = $_GET['numOficio'];
+
 
 // ?numOficio=SIS/0001/2016/V
 
-$numOficio = "";
+if (isset($_GET['numOficio']) && !empty($_GET['numOficio'])) {
+
+	$codigoQR = $_GET['numOficio'];
+
+	$numOficio = "";
 
 
 $con = new SQLite3("../protected/data/oficios.db");
@@ -43,8 +47,24 @@ include("plantilla.php");
 }
 
 
+}else{
+	
+	echo '
+
+	 <html>
+		<meta http-equiv="REFRESH" content="0; url=../index.php">
+	 </html>
+
+		';
+}
+
+
+
+
 // Si esta vacío se regresa
 
 // Si esta vacío se regresa
 
  ?>
+
+ <html></html>
