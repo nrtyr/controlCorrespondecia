@@ -5,6 +5,8 @@ include("seguridad.php");
 
 // Inician Todas las variables
 
+if (isset($_POST['txtCorreo']) && !empty($_POST['txtCorreo'])) {
+
 $NumOfi = $_POST['txtNumOfi'];
 $AreaEmi = $_POST['txtAreaEmi'];
 $DeptoEmi = $_POST['txtDeptoEmi'];
@@ -40,8 +42,47 @@ $cs2 = $con -> query("INSERT INTO infoOficios (infoOfi_NumOfi, infoOfi_AreaEmi, 
 
 $con -> close();
 
-echo "<script> alert('Datos Insertados!'); </script>";
+$dirOficio = "http://nicolasromero.mx/oficios/buscador/oficios.php?numOficio=".$NumOfi;
+$dirOficio2 = '
+
+ <!DOCTYPE html>
+ <html lang="es">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>'.$NumOfi.'</title>
+ </head>
+ <body>
+ 	<p>Puedes ver tu oficio en la siguiente dirección: <a href="'.$dirOficio.'">'.$dirOficio.'</a></p>
+ </body>
+ </html>
+
+';
+
+$email_to = $Correo;
+$email_subject = "Tienes un Oficio de: ".$AreaEmi." pendiente!";
+$email_message = $dirOficio2."\n\n";
+ 
+ 
+// Ahora se envía el e-mail usando la función mail() de PHP
+
+// $headers = 'From: '.$email_from."\r\n".
+// 'Reply-To: '.$email_from."\r\n" .
+// 'X-Mailer: PHP/' . phpversion();
+$headers  = "From: $from\r\n"; 
+$headers .= "Content-type: text/html; Charset=UTF-8\r\n";
+@mail($email_to, $email_subject, $email_message, $headers);
+
+
+echo "<script> alert('Oficio Enviado!'); </script>";
 echo "<script> window.location='creaOficios.php'; </script>";
+
+
+}else{
+	echo "<script> alert('Falta Correo!'); </script>";
+	echo "<script> window.location='creaOficios.php'; </script>";
+}
+
+
 
 
 

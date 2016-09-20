@@ -194,7 +194,7 @@ include("plantilla/marcadeagua.php");
 		
 		<input type="text" name="txtArchAdj" value="<?php echo $archAdjunto; ?>" class="inputOculto"/>
 		
-		<input type="mail" name="txtCorreo" placeholder="Correo Institucional.." class="inputGrande" />
+		<input type="email" name="txtCorreo" placeholder="Correo Institucional.." class="inputGrande" required/>
 		
 		<input type="text" name="txtNumEmp" value="<?php echo $numEMpleado; ?>" class="inputOculto"/>
 		
