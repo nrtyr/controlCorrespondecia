@@ -1,11 +1,5 @@
 <?php
 
-if ($fecha == 0) {
-	$dia = "";
-	$mes = "";
-	$ano = "";
-}else{
-
 $dia = substr($fecha, 8, 2);
 $mesNum = substr($fecha, 5, 2);
 
@@ -49,9 +43,6 @@ switch ($mesNum) {
 }
 
 $ano = substr($fecha, 0, 4);
-
-
-}
 
 
 ?>
